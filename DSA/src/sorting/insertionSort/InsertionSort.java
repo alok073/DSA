@@ -3,7 +3,7 @@ package sorting.insertionSort;
  * - start from i=1
  * - find the index(j) of smallest no. which is greater than A[i] to the left side (<i)
  * - shift all elements(A[j] to A[i-1]) to right side by 1
- * - A[j] = A[i-1]
+ * - A[j] = A[i]
  * - i++
  * e.g: {3, 4, 2, 5, 1}
  * ~ i=1, no element smaller than A[i] before i=1
