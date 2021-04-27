@@ -23,6 +23,8 @@ public class LinkedList {
 		list = insertLast(list, 40);
 		list = insertLast(list, 50);
 		
+		System.out.println(list.head.data);
+		
 		printLinkedList(list);
 	}
 	
