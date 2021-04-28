@@ -22,12 +22,12 @@ public class LinkedList {
 		list.head.next.next.next = new Node(40);
 		// 10 -> 20 -> 30 -> 40
 		
-		System.out.println("Linked list before removing tail");
+		System.out.println("Linked list before removing element at index K");
 		printLinkedList(list);
 		
 		removeAtIndex(list, 3);
 		
-		System.out.println("\nLinked list after removing tail");
+		System.out.println("\nLinked list after removing element at index K");
 		printLinkedList(list);
 	}
 	
