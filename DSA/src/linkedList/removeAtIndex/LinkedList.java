@@ -25,34 +25,33 @@ public class LinkedList {
 		System.out.println("Linked list before removing element at index K");
 		printLinkedList(list);
 		
-		removeAtIndex(list, 3);
+		removeAtIndex(list, 1);
 		
 		System.out.println("\nLinked list after removing element at index K");
 		printLinkedList(list);
 	}
 	
 	public static void removeAtIndex(LinkedList list, int k) {
-		if(k<0) {
+		if(k<1) {
 			System.out.println("invalid index");
 		}
-		else if(k == 0) {
-			list.head = list.head.next;
+		else if(k == 1) {
+			Node tempNext = list.head.next;
+			list.head.next = null;
+			list.head = tempNext;
 		}
 		else {
-			int i=0;
+			int cnt=1;
 			Node temp = list.head;
-			while(i < k) {
-				if(temp == null || temp.next==null && i+1 == k) {
-					System.out.println("\nIndex out of range");
-					break;
-				}
-				else if(temp.next != null && i+1 == k) {
+			while(temp.next != null) {
+				if(cnt+1 == k) {
 					temp.next = temp.next.next;
-					break;
+					return;
 				}
+				cnt++;
 				temp = temp.next;
-				i++;
 			}
+			System.out.println("Index out of range");
 		}
 	}
 	

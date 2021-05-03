@@ -4,7 +4,9 @@ package linkedList.removeFirst;
  * Q) Remove 1st node(head) of a linkedList
  * NOTE -> edge cases = check if head is present or not
  * - if head is present
- * 	- head = head.next 
+ * 	- get the nxt element of head in a temp node
+ * 	- make next of head as null
+ * 	- make head as the temp node
  * @author alok
  */
 
@@ -41,11 +43,10 @@ public class LinkedList {
 	}
 	
 	public static void removeFirst(LinkedList list) {
-		if(list.head == null) {
-			System.out.println("empty list");
-		}
-		else if(list.head != null) {
-			list.head = list.head.next;
+		if(list.head != null) {
+			Node temp = list.head.next;
+			list.head.next = null;
+			list.head = temp;
 		}
 	}
 	

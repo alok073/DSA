@@ -9,6 +9,18 @@ package linkedList.insertAtIndex;
  *  	- traverse till K-1 node
  *  	- If K-1 node != null....insert after K-1 node
  *  	- If null...invalid
+ *  
+ * ANOTHER APPROACH
+ * // head -> k=1
+ * - if k==1
+ * 		- head node
+ * - else
+ * 		- cnt=1
+ * 		- while temp!=null
+ * 			- if at k-1 node i.e cnt+1 == k
+ * 				- insert here
+ * 				- return
+ * 		- invalid input
  * @author alok
  */
 
@@ -37,38 +49,62 @@ public class LinkedList {
 		System.out.println("Linked list before insertion");
 		printLinkedList(list);
 		
-		insertAt(list, 6, 50);
+		insertAt(list, 1, 50);
 		
 		System.out.println("\nLinked list after insertion");
 		printLinkedList(list);
 	}
 	
+//	public static void insertAt(LinkedList list, int k, int value) {
+//		if(k < 0) {
+//			System.out.println("invalid");
+//		}
+//		else if(k == 0) {
+//			Node newNode = new Node(value);
+//			newNode.next = list.head;
+//			list.head = newNode;
+//		} 
+//		else {
+//			int i = 0;
+//			Node temp = list.head;
+//			while(i < k) {
+//				if(temp!= null && i+1 == k) {
+//					Node newNode = new Node(value);
+//					newNode.next = temp.next;
+//					temp.next = newNode;
+//					break;
+//				}
+//				else if(temp == null) {
+//					System.out.println("index value out of range");
+//					break;
+//				}
+//				temp = temp.next;
+//				i++;
+//			}
+//		}
+//	}
+	
 	public static void insertAt(LinkedList list, int k, int value) {
-		if(k < 0) {
-			System.out.println("invalid");
-		}
-		else if(k == 0) {
+		//head -> k=1
+		if(k == 1) {
 			Node newNode = new Node(value);
 			newNode.next = list.head;
 			list.head = newNode;
-		} 
+		}
 		else {
-			int i = 0;
+			int cnt = 1;
 			Node temp = list.head;
-			while(i < k) {
-				if(temp!= null && i+1 == k) {
+			while(temp != null) {
+				if(cnt+1 == k) {
 					Node newNode = new Node(value);
 					newNode.next = temp.next;
 					temp.next = newNode;
-					break;
+					return;
 				}
-				else if(temp == null) {
-					System.out.println("index value out of range");
-					break;
-				}
+				cnt++;
 				temp = temp.next;
-				i++;
 			}
+			System.out.println("index value out of range");
 		}
 	}
 	
