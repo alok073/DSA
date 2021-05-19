@@ -29,9 +29,9 @@ public class SpiralOrderTraversal {
 	 * - create 2 stacks...insert root in stack1
 	 * - iterate until both stacks are empty
 	 * 		- while any node is present in stack1
-	 * 			- pop it, print it and insert left 1st and then right child in stack2
-	 * 		- while any node is present in stack2
 	 * 			- pop it, print it and insert right 1st and then left child in stack2
+	 * 		- while any node is present in stack2
+	 * 			- pop it, print it and insert left 1st and then right child in stack2
 	 * - Time = O(n)
 	 *   Space = O(n)
 	 * @param root
