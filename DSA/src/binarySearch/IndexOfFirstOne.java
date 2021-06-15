@@ -49,7 +49,7 @@ public class IndexOfFirstOne {
 	public static int firstOccurrence(int start, int end, int[] array, int target) {
 		int res = -1;
 		while(start <= end) {
-			int mid = start - (start - end)/2;
+			int mid = start + (end - start)/2;
 			if(target == array[mid]) {
 				res = mid;
 				end = mid-1;

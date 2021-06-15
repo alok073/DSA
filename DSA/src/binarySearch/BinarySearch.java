@@ -4,7 +4,7 @@ public class BinarySearch {
 
 	public static void main(String[] args) {
 		int array[] = new int[] {2,5,6,8,11,12,15,18};
-		int search = binarySearch(array, 60);
+		int search = binarySearch(array, 8);
 		//int search = binarySearchRecursive(0, array.length-1, array, 18);
 		if(search == -1) {
 			System.out.println("Target element not present in the array");
@@ -26,7 +26,7 @@ public class BinarySearch {
 		int start = 0;
 		int end = array.length - 1;
 		while(start <= end) {
-			int mid = start - (start-end)/2;
+			int mid = start + (end - start)/2;
 			if(target == array[mid]) {
 				return mid;
 			}

@@ -22,7 +22,7 @@ public class CountNumberOfOccurrence {
 		int start = 0;
 		int end = array.length - 1;
 		while(start <= end) {
-			int mid = start - (start - end)/2;
+			int mid = start + (end - start)/2;;
 			if(target == array[mid]) {
 				res = mid;
 				end = mid-1;
@@ -38,7 +38,7 @@ public class CountNumberOfOccurrence {
 		int start = 0;
 		int end = array.length - 1;
 		while(start <= end) {
-			int mid = start - (start - end)/2;
+			int mid = start + (end - start)/2;
 			if(target == array[mid]) {
 				res = mid;
 				start = mid+1;

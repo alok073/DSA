@@ -13,7 +13,7 @@ public class MinimumDifferenceElement {
 		
 		int minDifferenceElement = findMinimumDiffElement(array, 12); //10
 		
-		System.out.println(minDifferenceElement);
+		System.out.println("Minimum difference element is = " + minDifferenceElement);
 	}
 	
 	/**
@@ -32,8 +32,6 @@ public class MinimumDifferenceElement {
 		int floorOfTarget = floor(array, target); //10..diff=2
 		int ceilOfTarget = ceil(array, target); //15...diff=3
 		
-		System.out.println(floorOfTarget + " " + ceilOfTarget);
-		
 		if(Math.abs(floorOfTarget-target) < Math.abs(ceilOfTarget - target)) {
 			return floorOfTarget;
 		}
@@ -46,7 +44,7 @@ public class MinimumDifferenceElement {
 		int start = 0, end = array.length - 1;
 		int res = Integer.MIN_VALUE;
 		while(start <= end) {
-			int mid = start - (start - end)/2;
+			int mid = start + (end - start)/2;
 			if(target == array[mid]) {
 				end = mid - 1;
 			}
@@ -65,7 +63,7 @@ public class MinimumDifferenceElement {
 		int start = 0, end = array.length - 1;
 		int res = Integer.MIN_VALUE;
 		while(start <= end) {
-			int mid = start - (start - end)/2;
+			int mid = start + (end - start)/2;
 			if(target == array[mid]) {
 				start = mid + 1;
 			}

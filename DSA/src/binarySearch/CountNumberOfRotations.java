@@ -18,7 +18,7 @@ public class CountNumberOfRotations {
 		int numberOfRotationsClockWise = array.length - minIndex; //8-5 = 3
 		int numberOfRotationsAntiClockwise = minIndex; // 5
 		
-		System.out.println(numberOfRotationsClockWise);
+		System.out.println("Total number of roatations = " + numberOfRotationsClockWise);
 	}
 	
 	/**
@@ -45,7 +45,7 @@ public class CountNumberOfRotations {
 				break;
 			}
 			
-			int mid = start - (start - end)/2;
+			int mid = start + (end - start)/2;
 			int prev = (n - 1 - mid) % n;
 			int next = (n + 1) % n;
 			if(array[mid] < array[prev] && array[mid] < array[next]) {

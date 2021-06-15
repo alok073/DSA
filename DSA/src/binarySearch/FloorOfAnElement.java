@@ -25,7 +25,7 @@ public class FloorOfAnElement {
 		int res = -1;
 		int start = 0, end = array.length - 1;
 		while(start <= end) {
-			int mid = start - (start - end)/2;
+			int mid = start + (end - start)/2;
 			if(target == array[mid]) {
 				return target;
 			}

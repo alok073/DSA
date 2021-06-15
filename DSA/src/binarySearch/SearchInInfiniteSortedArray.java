@@ -50,7 +50,7 @@ public class SearchInInfiniteSortedArray {
 	public static int applyBinarySearch(int start, int end, int target, int[] array) {
 		int res = -1;
 		while(start <= end) {
-			int mid = start - (start - end)/2;
+			int mid = start + (end - start)/2;
 			if(target == array[mid]) {
 				res = mid;
 				break;
