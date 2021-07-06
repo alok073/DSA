@@ -1,10 +1,20 @@
 package slidingWindow;
 
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+/**
+ * Q3) Given a String text and another String word, count all the occurrences of anagrams of 'word' string in 'text' string
+ * e.g: text="aabaabaa"; word="aaba"
+ * o/p: 4 i.e {aaba, abaa, aaba, abaa}
+ * 
+ * @author alok
+ *
+ */
 
 public class OccurrencesOfAnagrams {
 

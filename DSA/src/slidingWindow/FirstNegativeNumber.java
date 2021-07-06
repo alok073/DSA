@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Q) Given an array and int K, find the 1st negative element in each subArray of size=k. If there is no -ve element in a subArray print 0 for that particular subAarray
+ * Q2) Given an array and int K, find the 1st negative element in each subArray of size=k. If there is no -ve element in a subArray print 0 for that particular subAarray
  * -> array = {12, -1, -7, 8, -15, 30, 16, 28}
  * o/p: [-1, -1, -7, -15, -15, 0]
  * 

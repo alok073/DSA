@@ -1,5 +1,14 @@
 package slidingWindow;
 
+/**
+ * Q1) Given an array and int k, find a subArray of length k whose sum is maximum
+ * e.g: array = {1,4,2,10,23,3,1,0,20}, k=3
+ * o/p: 36 i.e {10, 23, 3}
+ * 
+ * @author alok
+ *
+ */
+
 public class MaxSumSubArray {
 
 	public static void main(String[] args) {
