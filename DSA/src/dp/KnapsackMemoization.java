@@ -41,7 +41,7 @@ public class KnapsackMemoization {
 		
 		//choice diagram
 		if(wt[n-1] <= w) {
-			return Math.max(val[n-1] + knapsack01(val, wt, w-wt[n-1], n-1), knapsack01(val, wt, w, n-1));
+			return dp[n][w] = Math.max(val[n-1] + knapsack01(val, wt, w-wt[n-1], n-1), knapsack01(val, wt, w, n-1));
 		}
 		else {
 			return knapsack01(val, wt, w, n-1);
