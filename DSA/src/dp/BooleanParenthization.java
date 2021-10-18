@@ -1,4 +1,4 @@
-package heaps;
+package dp;
 
 import java.util.HashMap;
 

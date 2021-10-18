@@ -4,8 +4,8 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 
 /**
- * Q10) Given an array and int k1 & k2, find all the elements in the array that are greater than K1th & K2th smallesst numbers in the array
- * i/p: {1,3,12,5,15,11}
+ * Q10) Given an array and int k1 & k2, find all the elements in the array that are greater than K1th & K2th smallest numbers in the array
+ * i/p: {1,3,12,5,15,11}, k1=3, k2=6
  * o/p: 23
  * 
  * Explanation:-
